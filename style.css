@@ -6,7 +6,7 @@
 }
 
 body {
-  height: 4000px;
+  height: 4500px;
   background-color: #eee;
   position: relative;
 }
@@ -354,9 +354,117 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
+  margin: 50px 0;
+  grid-gap: 20px;
 }
 
-#ideas img {
+#ideas #ideastitle {
+  margin: -20px 20px;
+}
+
+#ideas #ideastitle h1 {
+  font-size: 58px;
+}
+
+#ideas #ideastitle p {
+  margin: 15px 0px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+#ideas #ideastitle .button-ideas {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 40px;
   width: 150px;
+  border: 2px solid #000;
+  margin: 20px 0;
+  background-color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#ideas #ideastitle .button-ideas a {
+  position: relative;
+  -webkit-transition: all 0.45s ease-Out;
+  transition: all 0.45s ease-Out;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+#ideas #ideastitle .button-ideas .circle {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  line-height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  -webkit-transition: all 0.5s ease-Out;
+  transition: all 0.5s ease-Out;
+  top: 20px;
+  left: 70px;
+}
+
+#ideas #ideastitle .button-ideas:hover {
+  border: 2px solid #fff;
+}
+
+#ideas #ideastitle .button-ideas:hover .circle {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  top: -70px;
+  left: -70px;
+}
+
+#ideas #ideastitle .button-ideas:hover a {
+  color: #000;
+}
+
+#ideas .ideasbox {
+  margin-top: 50px;
+  text-align: center;
+  margin: 30px 20px;
+  background-color: #fff;
+  width: 270px;
+  height: 350px;
+}
+
+#ideas .ideasbox .ideastext {
+  margin: 0 auto;
+  width: 200px;
+  line-height: 1.5;
+}
+
+#ideas .ideasbox .ideastext h2 {
+  font-size: 24px;
+}
+
+#ideas .ideasbox .ideastext p {
+  font-size: 18px;
+}
+
+#ideas .ideasbox img {
+  margin-top: 15px;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */
