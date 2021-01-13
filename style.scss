@@ -10,6 +10,59 @@ body {
     background-color: #eee;
     // overflow: hidden;
     position: relative;
+    .button-ideas {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        display: inline-flex;
+        height: 40px;
+        width: 150px;
+        border: 2px solid #000;
+        margin: 20px 0;
+        background-color: #000;
+        opacity: 0.9;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.8em;
+        letter-spacing: 1.5px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: 0.5s;
+        a {
+            position: relative;
+            transition: all 0.45s ease-Out;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .circle {
+            width: 0%;
+            height: 0%;
+            opacity: 0;
+            line-height: 40px;
+            border-radius: 50%;
+            background: #fff;
+
+            position: absolute;
+            transition: all 0.5s ease-Out;
+            top: 20px;
+            left: 70px;
+        }
+        &:hover {
+            border: 2px solid #fff;
+            .circle {
+                width: 200%;
+                height: 500%;
+                opacity: 1;
+                top: -70px;
+                left: -70px;
+            }
+            a {
+                color: #000;
+            }
+        }
+    }
 }
 // banner+nav
 
@@ -22,7 +75,7 @@ body {
     transition: 0.3s;
     opacity: 0.8;
     position: fixed;
-    z-index: 3;
+    z-index: 8;
     backdrop-filter: brightness(70%);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     background: rgba(0, 0, 0, 0.3);
@@ -160,55 +213,90 @@ body {
         }
     }
 }
-
 #Aboutus {
+    position: relative;
     width: 100vw;
-    height: 800px;
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    height: 950px;
+    background-color: #fff;
     #aboutleft {
-        position: relative;
-        margin: 50px auto;
-        margin-left: 80px;
+       
+        background-color: #fff;
+        position: absolute;
+        top: 230px;
+        left: 100px;
+        z-index: 6;
+        width: 680px;
         height: 600px;
-        width: 600px;
-        background: rgba(0, 0, 0, 0.8);
-        #abouttext {
-            margin: 0 auto;
-            width: 400px;
-            h1 {
-                margin: 15px;
-                padding: 15px;
-                text-align: center;
-                font-size: 48px;
-                color: #fff;
+        .button-ideas{
+            margin-top: 50px;   
+        }
+        #aboutimg {
+
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 620px;
+            .about-img-box1,
+            .about-img-box2,
+            .about-img-box3 {
+                transition: 0.5s;
+                margin-top: 50px;
+                cursor: pointer;
+                img {
+                    width: 150px;
+                    height: 200px;
+                    
+                }
+
+                &:hover{
+                    transform: translateY(-10px);
+
+                }
             }
-            hr {
-                margin: 15px auto;
-                border: none;
-                background-color: #fff;
-                height: 3px;
-                width: 150px;
+        }
+        #abouttext{
+            width: 620px;
+            
+            #abouttitle {
+                color: #808080;
             }
             p {
-                margin-top: 30px;
-                font-size: 24px;
+                margin-top: 20px;
+                font-size: 18px;
+                padding: 10px 0;
                 line-height: 1.5;
-                color: #fff;
+                color: #696969;
+                letter-spacing: 0.5px;
+            }
+            h1 {
+                font-size: 42px;
+                line-height: 1.5;
+                letter-spacing: 0.5px;
             }
         }
     }
-    #aboutright {
+    #aboutrightimg {
+        background-image: url(./img/aboutusright.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
         position: absolute;
-        right: 120px;
-        background-attachment: fixed;
-        img {
-            z-index: 5;
-            width: 500px;
-            height: 600px;
-            object-fit: cover;
-        }
+        right: 150px;
+        top: 120px;
+        width: 462px;
+        height: 692px;
+        object-fit: cover;
+        z-index: 5;
+       
+    }
+    #Square{
+        position: absolute;
+        width: 400px;
+        right: 80px;
+        height: 600px;
+        border: 8px solid #696969;
+        z-index: 4;
+        top:60px
+
+
     }
 }
 .boxcenter {
@@ -218,7 +306,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
     z-index: -2;
     background-attachment: fixed;
     h2 {
@@ -290,8 +377,13 @@ body {
     grid-template-columns: repeat(4, 1fr);
     margin: 50px 0;
     grid-gap: 20px;
+    background-color: #eee;
     #ideastitle {
-        margin: -20px 20px;
+        width: 250px;
+        margin: -20px 30px;
+        #title-h1 {
+            color: #808080;
+        }
         h1 {
             font-size: 58px;
         }
@@ -299,59 +391,9 @@ body {
             margin: 15px 0px;
             line-height: 1.5;
             font-size: 18px;
+            color: #696969;
         }
-        .button-ideas {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            display: inline-flex;
-            height: 40px;
-            width: 150px;
-            border: 2px solid #000;
-            margin: 20px 0;
-            background-color: #000;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 0.8em;
-            letter-spacing: 1.5px;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            transition: 0.5s;
-            a {
-                position: relative;
-                transition: all 0.45s ease-Out;
-                color: #fff;
-                text-decoration: none;
-                letter-spacing: 1px;
-            }
-            .circle {
-                width: 0%;
-                height: 0%;
-                opacity: 0;
-                line-height: 40px;
-                border-radius: 50%;
-                background: #fff;
 
-                position: absolute;
-                transition: all 0.5s ease-Out;
-                top: 20px;
-                left: 70px;
-            }
-            &:hover {
-                border: 2px solid #fff;
-                .circle {
-                    width: 200%;
-                    height: 500%;
-                    opacity: 1;
-                    top: -70px;
-                    left: -70px;
-                }
-                a {
-                    color: #000;
-                }
-            }
-        }
     }
     .ideasbox {
         margin-top: 50px;
@@ -369,7 +411,7 @@ body {
             height: 350px;
             background-color: #fff;
             position: relative;
-            transition: 0.6s ;
+            transition: 0.6s;
             transition-delay: 0.1s;
             -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
@@ -380,7 +422,7 @@ body {
                 position: absolute;
                 top: 0;
                 left: 0;
-                filter: brightness(80%);
+                filter: brightness(65%);
             }
             .front,
             .back {
@@ -393,10 +435,12 @@ body {
                     margin: 15px auto;
                     width: 150px;
                     object-fit: cover;
+                    transition-delay: 0.1s;
+                    transition: 0.6s;
                 }
                 .ideastext {
                     position: absolute;
-                    top: 150px;
+                    top: 180px;
                     width: 250px;
                     line-height: 1.5;
                     h2 {
@@ -416,8 +460,11 @@ body {
             &:hover {
                 -webkit-transform: rotateY(180deg);
                 -moz-transform: rotateY(180deg);
-                transform: rotateY(180deg);           
+                transform: rotateY(180deg);
                 color: #fff;
+                .ideasicon {
+                    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(107%) contrast(101%);
+                }
             }
         }
     }
