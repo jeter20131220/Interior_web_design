@@ -374,13 +374,15 @@ body .button-ideas:hover a {
   background-position: center;
   z-index: -2;
   background-attachment: fixed;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
 }
 
-.boxcenter h2 {
-  text-align: center;
+.boxcenter h1 {
   font-size: 72px;
   color: #fff;
-  line-height: 450px;
   -webkit-backdrop-filter: opacity(90%) brightness(80%);
           backdrop-filter: opacity(90%) brightness(80%);
 }
