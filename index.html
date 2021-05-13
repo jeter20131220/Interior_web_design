@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy's interior studio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
 <body>
@@ -85,6 +89,7 @@
         <div id="Square"></div>
     </section>
     <section class="boxcenter">
+        <div id="test"></div>
         <div id="boxcenterleft">
             <h1>Exquisite solutions by leading designers of our agency</h1>
             <div class="button-ideas">
@@ -93,15 +98,18 @@
             </div>
         </div>
         <div id="boxcenterright">
-         <form id="web-form" action="">
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="text" id="name" placeholder="Email" required>  
-            <input type="text" id="name" placeholder="Phone" required>
-            <input type="submit" value="SEND REQUEST">    
-         </form>   
+            <form id="web-form" mothod="post" action="">
+                <h2>Get our design offer</h2>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="email" placeholder="Email" required>
+                <input type="text" id="phone" placeholder="Phone" required>
+                <input id="input" type="submit" value="SEND REQUEST">
+            </form>
         </div>
     </section>
     <section id="Projects">
+        <h2 id="Projects-h2">Andy's studio</h2>
+        <h5>PORTFOLIO</h5>
         <h1>Completed Projects</h1>
         <div id="Projects1-box">
             <div class="Projects1"><img class="projectimg" src="./img/project/Projects5.jpg" alt="">
@@ -292,8 +300,78 @@
         </div>
 
     </section>
+    <section id="latestnews">
+        <div id="latestnews-title">
+            <h2>Andy's studio</h2>
+            <h1>Latest News</h1>
+        </div>
+        <div id="slider1">
+            <div>
+                <img src="./img/slider/slider1.jpg" alt="">
+                <h2>interior design</h2>
+                <p>31 january 2021</p>
+            </div>
+            <div>
+                <img src="./img/slider/slider2.jpg" alt="">
+                <h2>Andy's interior design</h2>
+                <p>31 january 2021</p>
+            </div>
+            <div>
+                <img src="./img/slider/slider3.jpg" alt="">
+                <h2>interior design</h2>
+                <p>31 january 2021</p>
+            </div>
+            <div>
+                <img src="./img/slider/slider4.jpg" alt="">
+                <h2>interior design</h2>
+                <p>31 january 2021</p>
+            </div>
+            <div>
+                <img src="./img/slider/slider5.jpg" alt="">
+                <h2>interior design</h2>
+                <p>31 january 2021</p>
+            </div>
+            <div>
+                <img src="./img/slider/slider6.jpg" alt="">
+                <h2>interior design</h2>
+                <p>31 january 2021</p>
+            </div>
+            <!-- <img src="./img/slider/slider1.jpg" alt="">
+         <img src="./img/slider/slider3.jpg" alt=""> 
+         <img src="./img/slider/slider4.jpg" alt="">
+         <img src="./img/slider/slider5.jpg" alt="">
+         <img src="./img/slider/slider6.jpg" alt=""> -->
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="footer-box">
+            <div class="footer-text">
+                <h1>Andy's interior studio</h1>
+                <div class="footer-link">
+                    <a href="">About us</a>
+                    <a href="">Projects</a>
+                    <a href="">Services</a>
+                    <a href="">Contact</a>
+                </div>
+                <h2 id="phone">0 (550) 680-34-12</h2>
+            </div>
+            <div class="social">
+                <a href=""><img src="./img/tw.png" alt=""></a>
+                <a href=""><img src="./img/fb.png" alt=""></a>
+                <a href=""><img src="./img/in.png" alt=""></a>
+                <a class="ig" href=""><img src="./img/ig.png" alt=""></a>
+            </div>    
+        </div>
+        <hr>
+        <p>Copyright &copy; 2021 Andy all rights reserved.</p>
+
+    </section>
+
     <!--   jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- slick CDN -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- js -->
     <script src="./script/main.js"></script>
 </body>

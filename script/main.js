@@ -10,3 +10,13 @@ $(window).scroll(function(){
   }
     
 });
+
+$("#slider1").slick({
+  // 無限
+  // 一次顯示幾個
+  slidesToShow: 3,
+  // 一次捲動幾個
+  slidesToScroll: 1,
+  // autoplay: true,
+  autoplaySpeed: 2000,
+});
