@@ -17,6 +17,6 @@ $("#slider1").slick({
   slidesToShow: 3,
   // 一次捲動幾個
   slidesToScroll: 1,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 2000,
 });
